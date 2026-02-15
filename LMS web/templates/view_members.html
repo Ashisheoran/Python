@@ -1,0 +1,16 @@
+<!-- templates/view_members.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Library Members{% endblock %}
+
+{% block content %}
+  <h2 class="mb-4">📋 Library Members</h2>
+  <ul class="list-group">
+    {% for member in members %}
+      <li class="list-group-item bg-dark text-white">
+        <strong>{{ member.name }}</strong> ({{ member.member_type.value }})
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Add Item{% endblock %}
+{% block content %}
+<h2>Add New Item</h2>
+<form method="POST" class="card p-4">
+  <div class="mb-3">
+    <label>Title</label>
+    <input class="form-control" type="text" name="title" required>
+  </div>
+  <div class="mb-3">
+    <label>Author/Publisher</label>
+    <input class="form-control" type="text" name="creator" required>
+  </div>
+  <div class="mb-3">
+    <label>Copies</label>
+    <input class="form-control" type="number" name="copies" required>
+  </div>
+  <div class="mb-3">
+    <label>Item Type</label>
+    <select class="form-control" name="item_type">
+      <option value="Book">Book</option>
+      <option value="Newspaper">Newspaper</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit">Add Item</button>
+</form>
+{% endblock %}

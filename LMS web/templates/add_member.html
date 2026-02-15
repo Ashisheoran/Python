@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Add Member{% endblock %}
+{% block content %}
+<h2>Add New Member</h2>
+<form method="POST" class="card p-4">
+  <div class="mb-3">
+    <label>Name</label>
+    <input class="form-control" type="text" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label>Member Type</label>
+    <select class="form-control" name="type">
+      <option value="staff">Staff</option>
+      <option value="premium">Premium</option>
+      <option value="regular">Regular</option>
+    </select>
+  </div>
+  <button class="btn btn-success" type="submit">Add Member</button>
+</form>
+{% endblock %}
